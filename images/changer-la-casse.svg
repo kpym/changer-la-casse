@@ -1,0 +1,8 @@
+<svg viewBox="0 0 110 70" xmlns="http://www.w3.org/2000/svg">
+  <path style="color:#000;fill-rule:evenodd;fill:purple;stop-color:#000" d="M0 0h110v70h-110z"/>
+  <text xml:space="preserve" style="font-family:Ubuntu;font-size:7.40833px;font-weight:700;stroke:none;fill:#fff">
+    <tspan x="24.3" y="24.5" >changer la casse !</tspan>
+    <tspan x="22.1" y="38.1" >Changer La Casse !</tspan>
+    <tspan x="16.7" y="51.2" >CHANGER LA CASSE !</tspan>
+  </text>
+</svg>
