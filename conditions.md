@@ -1,14 +1,12 @@
-# Changer la case
+# Changer-la-casse
 
-- Page web : [kpym.github.io/changer-la-casse](https://kpym.github.io/changer-la-casse)
-- Dépot Github : [github.com/kpym/changer-la-casse](https://github.com/kpym/changer-la-casse)
+- Web page: [kpym.github.io/changer-la-casse](https://kpym.github.io/changer-la-casse)  
+- GitHub repository: [github.com/kpym/changer-la-casse](https://github.com/kpym/changer-la-casse)  
 
+## Terms of Use
 
-## Condition d'utilisation
+This module is provided without guarantees. Its open and free code is available at [github.com/kpym/changer-la-casse](https://github.com/kpym/changer-la-casse).  
 
-Ce module est fournit sans garenties. Son code, ouvert et libre, est disponible sur [github.com/kpym/changer-la-casse](https://github.com/kpym/changer-la-casse).
+## Privacy Policy
 
-
-## Règles de confidentialité
-
-Comme vous pouver vérifier dans sur [github.com/kpym/changer-la-casse](https://github.com/kpym/changer-la-casse) le code App Script n'envoie aucune information en dehors des serveurs de Google.
+As you can verify on [github.com/kpym/changer-la-casse](https://github.com/kpym/changer-la-casse), the App Script code does not send any information outside of Google's servers.  

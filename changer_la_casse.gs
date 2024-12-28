@@ -1,33 +1,37 @@
-// Ce script permet de changer la casse des lettres (MAJUSCULES/minuscules/Majuscule Au-Début) dans une feuille de calcul Google.
+// This script is used to change the case of letters (UPPERCASE/lowercase/Title-Case) in a Google spreadsheet.
 
+// onOpen is used to create a menu in the Google spreadsheet
 function onOpen() {
     SpreadsheetApp
         .getUi()
         .createAddonMenu()
-        .addItem('MAJUSCULES', 'upper')
-        .addItem('minuscules', 'lower')
-        .addItem('Majuscule Au-Début', 'proper')
+        .addItem('UPPERCASE', 'upper')
+        .addItem('lowercase', 'lower')
+        .addItem('Title-Case', 'proper')
         .addToUi();
 }
 
-function lower() {
-    run(toLowerCase)
-}
-
+// function called when the user selects the UPPERCASE option in the menu
 function upper() {
     run(toUpperCase)
 }
 
+// function called when the user selects the lowercase option in the menu
+function lower() {
+    run(toLowerCase)
+}
+// function called when the user selects the Title-Case option in the menu
 function proper() {
     run(toTitleCase)
 }
 
+// run is used to apply the function fn (toUpperCase, toLowerCase, toTitleCase) 
+// to the selected range.
 function run(fn) {
-
     var r, s, v, f;
 
     s = SpreadsheetApp.getActiveSheet(),
-    r = s.getActiveRange()
+        r = s.getActiveRange()
     v = r.getValues();
     f = r.getFormulas()
 
@@ -41,6 +45,7 @@ function run(fn) {
     keepFormulas(s, r, f);
 }
 
+// the actual functions that change the case of the letters 
 function toUpperCase(str) {
     return str.toUpperCase();
 }
@@ -51,11 +56,13 @@ function toLowerCase(str) {
 
 function toTitleCase(str) {
     return str.toLowerCase().replace(/(?:^|[\s-/])\w/g,
-      function (match) {
-        return match.toUpperCase();
-      });
+        function (match) {
+            return match.toUpperCase();
+        });
 }
 
+// keepFormulas is used to ask the user if they want to keep 
+// the formulas (if any) in the selected range.
 function keepFormulas(sheet, range, formulas) {
 
     var startRow, startColumn, ui, response;
@@ -66,7 +73,7 @@ function keepFormulas(sheet, range, formulas) {
     if (hasFormulas(formulas)) {
 
         ui = SpreadsheetApp.getUi();
-        response = ui.alert('FORMULES TROUVÉS', 'Garder les formules ?', ui.ButtonSet.YES_NO);
+        response = ui.alert('FORMULAS FOUND', 'Keep the formulas?', ui.ButtonSet.YES_NO);
 
         if (response == ui.Button.YES) {
             formulas.forEach(function (r, i) {
@@ -79,6 +86,7 @@ function keepFormulas(sheet, range, formulas) {
     }
 }
 
+// hasFormulas is used to check if the selected range contains formulas
 function hasFormulas(formulas) {
     return formulas.reduce(function (a, b) {
         return a.concat(b);
